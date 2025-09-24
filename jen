@@ -19,8 +19,8 @@ pipeline {
         bat """
         if exist out rmdir /s /q out
         mkdir out
-        javac -source 1.8 -target 1.8 src/hello/*.java -d out
-        java -cp out src.hello.Hello
+        javac -source 1.8 -target 1.8 src/*.java -d out
+        java -cp out hello.Hello
         echo Build_OK > artifact.txt
         """
       }
