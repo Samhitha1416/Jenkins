@@ -20,7 +20,7 @@ pipeline {
         if exist out rmdir /s /q out
         mkdir out
         javac src/*.java -d out
-        java -cp out hello.Hello
+        java -cp out Hello
         echo Build_OK > artifact.txt
         """
       }
